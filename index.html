@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozylight - Premium Handmade Candles</title>
+    <style>
+        /* CSS Styles - نفس ستايلك وبالخلفية بتاعتك */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('background.png'); 
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        header {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(209, 211, 202, 0.3)), url('background.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff; 
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333; 
+            background: rgba(255,255,255,0.7);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            width: 100%;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.9); 
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 280px; 
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: #e67e22;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding: 0 15px;
+        }
+
+        .action-btn {
+            padding: 10px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .view-btn { background-color: #2c3e50; color: white; }
+        .cart-btn { background-color: #e67e22; color: white; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#classic">Classic</a>
+        <a href="#premium">Premium</a>
+        <a href="#luxury">Luxury</a>
+    </nav>
+
+    <header>
+        <h1>CozyLight</h1>
+        <p>Premium Handmade Candles</p>
+    </header>
+
+    <!-- SECTION 1: Classic (10 Products) -->
+    <div class="container" id="classic">
+        <h2 class="section-title">Classic Collection</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="lavander breathe.jpg" alt="Candle 1">
+                <div class="product-info">
+                    <div class="product-name">Lavender Mist</div>
+                    <div class="product-price">$20.00</div>
+                    <div class="btn-group">
+                        <button class="action-btn view-btn" onclick="alert('Pure lavender for relaxation.')">View Details</button>
+                        <button class="action-btn cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="calm breathe.jpg" alt="Candle 2">
+                <div class="product-info">
+                    <div class="product-name">calm breathe</div>
+                    <div class="product-price">$22.00</div>
+                    <div class="btn-group">
+                        <button class="action-btn view-btn" onclick="alert('Fresh sea salt and mist.')">View Details</button>
+                        <button class="action-btn cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- كملي بنفس النمط لـ 10 منتجات في كل سكشن -->
+            <!-- سأضع لكِ الهيكل لملئ الأسماء والصور بسهولة -->
+            <div class="product-card"><img src="elegantcandl.jpg" alt="3"><div class="product-info"><div class="product-name">elegant</div><div class="product-price">$18.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Sweet vanilla bean.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="flowery.jpg" alt="4"><div class="product-info"><div class="product-name">Rose Garden</div><div class="product-price">$25.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Fresh cut roses.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="lemon.jpg" alt="5"><div class="product-info"><div class="product-name">Lemon Zest</div><div class="product-price">$15.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Energizing citrus.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="lovely.jpg" alt="6"><div class="product-info"><div class="product-name">lovely</div><div class="product-price">$24.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Sweet organic honey.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="littleangels.jpg" alt="7"><div class="product-info"><div class="product-name">littleangels</div><div class="product-price">$19.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Clean linen scent.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="coconute.jpg" alt="8"><div class="product-info"><div class="product-name">coconute</div><div class="product-price">$21.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Warm cinnamon apple.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="loly.jpg" alt="9"><div class="product-info"><div class="product-name">Minty Fresh</div><div class="product-price">$17.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Cool peppermint.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="Berrybonbons.jpg" alt="10"><div class="product-info"><div class="product-name">Berry Bonbons</div><div class="product-price">$23.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Mixed wild berries.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+        </div>
+    </div>
+
+    <!-- SECTION 2: Premium (10 Products) -->
+    <div class="container" id="premium">
+        <h2 class="section-title">Premium Collection</h2>
+        <div class="products-grid">
+            <!-- ابدأي من img11 إلى img20 وغيري الأسماء -->
+            <div class="product-card"><img src="oceanshellglow.jpg" alt="11"><div class="product-info"><div class="product-name">oceanshellglow</div><div class="product-price">$40.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Deep woody aroma.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="pinkblossombites.jpg" alt="12"><div class="product-info"><div class="product-name">pinkblossombites</div><div class="product-price">$42.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Rich amber and musk.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="red perry.jpg" alt="13"><div class="product-info"><div class="product-name">red perry</div><div class="product-price">$38.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Rare night flowers.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="moon light.jpg" alt="14"><div class="product-info"><div class="product-name">moon light</div><div class="product-price">$50.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Authentic royal oud.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="cozylightsignature.jpg" alt="15"><div class="product-info"><div class="product-name">cozylightsignature</div><div class="product-price">$35.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Warm tea and spices.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="Aquavanila.jpg" alt="16"><div class="product-info"><div class="product-name">Aquavanila</div><div class="product-price">$37.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Pure white jasmine.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="ice-coffee.jpg" alt="17"><div class="product-info"><div class="product-name">ice-coffee</div><div class="product-price">$45.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Warm sunset vibes.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="starbacks.jpg" alt="18"><div class="product-info"><div class="product-name">starbacks</div><div class="product-price">$33.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Fresh spa scent.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="strawberrybliss.jpg" alt="19"><div class="product-info"><div class="product-name">strawberrybliss</div><div class="product-price">$30.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Fresh roasted coffee.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="seashells.jpg" alt="20"><div class="product-info"><div class="product-name">seashells</div><div class="product-price">$36.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Sweet summer peach.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+        </div>
+    </div>
+
+    <!-- SECTION 3: Luxury (10 Products) -->
+    <div class="container" id="luxury">
+        <h2 class="section-title">Luxury Collection</h2>
+        <div class="products-grid">
+            <!-- ابدأي من img21 إلى img30 -->
+            <div class="product-card"><img src="sky.jpg" alt="21"><div class="product-info"><div class="product-name">Sky</div><div class="product-price">$80.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Infused with gold flakes.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="chocolate.jpg" alt="22"><div class="product-info"><div class="product-name">chocolate</div><div class="product-price">$75.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Luxury floral blend.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="cute bears.jpg" alt="23"><div class="product-info"><div class="product-name">cute bears</div><div class="product-price">$90.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Elegant deep scent.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="orio.jpg" alt="24"><div class="product-info"><div class="product-name">orio milke</div><div class="product-price">$100.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('The ultimate luxury.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="popcorn.jpg" alt="25"><div class="product-info"><div class="product-name">Velvet nights</div><div class="product-price">$85.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Rare black orchid.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="frozen brain.jpg" alt="26"><div class="product-info"><div class="product-name">out of the brain</div><div class="product-price">$120.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Aged royal oud.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="sunflowr.jpg" alt="27"><div class="product-info"><div class="product-name">sun fllower</div><div class="product-price">$70.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Spicy saffron blend.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="teatimewarm.jpg" alt="28"><div class="product-info"><div class="product-name">tea time</div><div class="product-price">$65.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Luxury peony flowers.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="tulip romance.jpg" alt="29"><div class="product-info"><div class="product-name">tulip romance</div><div class="product-price">$95.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Celebration scent.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+            <div class="product-card"><img src="watermlon delight.jpg" alt="30"><div class="product-info"><div class="product-name">watermlon</div><div class="product-price">$150.00</div><div class="btn-group"><button class="action-btn view-btn" onclick="alert('Our secret handmade formula.')">View Details</button><button class="action-btn cart-btn">Add to Cart</button></div></div></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CozyLight. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
